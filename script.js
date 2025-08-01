@@ -47,3 +47,11 @@ if (percentageCapacity > 80) {
     console.log("PLANTED")
 
 
+//---------------- Part 2 -----------------------
+// The amount of additional space that would be required if the scientists were to start with 100 plants, and did not prune them for 10 weeks.
+// If the space remained circular, what would be the radius of this expanded garden?
+let incomingPlants = 100;
+let newGrowth = (incomingPlants *(2**week) ) * .8;
+console.log(newGrowth);
+
+// --------------- Part 3 ------------------------
