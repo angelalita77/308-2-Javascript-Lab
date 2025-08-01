@@ -8,7 +8,7 @@ console.log(`Max Capacity is ${maxCapcity}`);
 // Each plant requires a minimum space of 0.8 square meters.
 // The area is starting with 20 plants.
 let plants = 20;
-let week = 1;
+let week = null;
 
 // The plants double in number every week.
 // week0:
@@ -55,3 +55,21 @@ let newGrowth = (incomingPlants *(2**week) ) * .8;
 console.log(newGrowth);
 
 // --------------- Part 3 ------------------------
+// The scientists decided not to listen to your recommendations, and have instead started with 100 plants in the original 5-meter-radius garden.
+// Use try and catch to wrap your work in an error-handling block. If the amount of space required to hold the originally provided number of plants exceeds the amount of space available, throw a new error and log an appropriate message.
+
+percentageCapacity = (newGrowth/maxCapcity) * 100;
+console.log(percentageCapacity)
+
+try {
+	if (percentageCapacity < 50) {
+		console.log("PLANTED");
+	} else if ((percentageCapacity > 50) && (percentageCapacity < 80)) {
+		console.log("MONITORED");
+	} else {
+        throw "PRUNED"
+    }
+} catch (error) {
+	console.log(error);
+}
+
